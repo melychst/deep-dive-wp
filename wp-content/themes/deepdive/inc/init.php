@@ -15,6 +15,7 @@ add_action( version_compare('5.8', get_bloginfo('version'), '<=' ) ? 'block_cate
 function custom_acf_init() {
 
     $blocksArray = array(
+        'Home hero',
         'Daily price',
     );
     // check function exists

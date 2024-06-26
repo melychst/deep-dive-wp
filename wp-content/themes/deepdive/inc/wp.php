@@ -38,7 +38,7 @@ add_action( 'widgets_init', 'sidebar_widgets_init' );
 add_action('wp_enqueue_scripts', 'require_scripts');
 function require_scripts() {
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('customm-script', 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs', array(), '1', 'in_footer');
+	wp_enqueue_script_module('lottie-script', 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs', array('jquery' ), '1', false);
 	wp_enqueue_script('owl-carousel', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.min.js', array(), '1', 'in_footer');
 	wp_enqueue_script('customm-script', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1', 'in_footer');
 
@@ -48,6 +48,7 @@ function require_scripts() {
 
 function add_file_types_to_uploads($mimes){
 	$mimes['svg'] = 'image/svg+xml';
+	$mimes['json'] = 'text/plain';
 	return $mimes;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
