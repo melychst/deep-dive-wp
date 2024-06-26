@@ -16,7 +16,9 @@ function custom_acf_init() {
 
     $blocksArray = array(
         'Home hero',
+        'Home columns content',
         'Daily price',
+
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
