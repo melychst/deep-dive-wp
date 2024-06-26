@@ -28,6 +28,46 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_667c5d3f9bfb3",
+            "label": "Header button title",
+            "name": "header_button_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_667c5d549bfb4",
+            "label": "Header button link",
+            "name": "header_button_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_667c47abf5a2f",
             "label": "Footer logo",
             "name": "footer_logo",
@@ -193,5 +233,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719421138
+    "modified": 1719426403
 }

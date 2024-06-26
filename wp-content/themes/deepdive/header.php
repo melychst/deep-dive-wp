@@ -16,25 +16,40 @@
                 <div class="column column-left">
                     <div class="logo-wrap">
                         <a href="/">
-                            <img src="images/Logo-header.svg" alt="">
+                            <?php 
+                                $header_logo = get_field('header_logo', 'option');
+                                if( $header_logo ):
+                            ?>
+                                <img src="<?php echo $header_logo['url']; ?>" alt="<?php echo bloginfo();?>">
+                            <?php
+                                endif;
+                            ?>
                         </a>
                     </div>
                 </div>
                 <div class="column column-center">
                     <div class="navigation-wrap">
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">How we work</a></li>
-                            <li><a href="#">hours and locations</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">careers</a></li>
-                        </ul>
+                        <?php
+                            wp_nav_menu(array(
+                                "theme_location"  => "primary",
+                                "menu"              => "primary",
+                            ));
+                        ?>
                     </div>
                 </div>
                 <div class="column column-right">
-                    <div class="button-wrap">
-                        <a class="btn btn-black" href="#">Contact us</a>
-                    </div>
+                    <?php
+                        $btn_title = get_field('header_button_title', 'option');
+                        if( $btn_title != '' ):
+                    ?>
+                            <div class="button-wrap">
+                                <a class="btn btn-black" href="<?php echo get_field('header_button_link', 'option')?>">
+                                    <?php echo $btn_title; ?>
+                                </a>
+                            </div>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div>            
         </div>
