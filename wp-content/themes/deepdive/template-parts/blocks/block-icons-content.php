@@ -6,6 +6,7 @@
                 <?php 
                     $icons = get_field('icons');
                     if( !empty($icons) ):
+
                         foreach ($icons as $key => $icon):
                 ?>
                             <div class="icon-column">
