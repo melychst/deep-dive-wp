@@ -3,8 +3,8 @@
 function register_blocks_categories( $categories ) {
 
 $categories = array_merge( $categories, array( array(
-        'slug' => 'impactforce',
-        'title' => __( 'ImpactForce' )
+        'slug' => 'deep-dive',
+        'title' => __( 'Deep dive' )
     ) ) );
 
     
@@ -18,7 +18,9 @@ function custom_acf_init() {
         'Home hero',
         'Home columns content',
         'Daily price',
-
+        'Duble columns',
+        'Duble columns revers',
+        'Icons content',
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
@@ -31,7 +33,7 @@ function custom_acf_init() {
             'title' => $blk,
             'description' => $blk,
             'render_callback' => 'custom_acf_block_render_callback',
-            'category' => 'impactforce',
+            'category' => 'deep-dive',
             'icon' => 'block-default',
             'keywords' => array('builder', 'revo'),
             'anchor' => true,
