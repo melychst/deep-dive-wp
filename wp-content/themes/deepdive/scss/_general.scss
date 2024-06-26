@@ -1,0 +1,117 @@
+@import "global_wars";
+
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+a {
+	text-decoration: none;
+}
+a img {
+	border: 0;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+.container {
+	max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+	padding-left: 60px;
+	padding-right: 60px;
+	position: relative;
+	@include media($xxl){
+		max-width: 1022px;
+	}
+	@include media($xl){
+		max-width: 768px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	@include media($sm){
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	&.space-between {
+		justify-content: space-between;
+	}
+	&.align-items-center {
+		align-items: center;
+	}
+}
+a {
+	color: #000000;
+	&.btn {
+		display: inline-flex;
+		height: 58px;
+		align-items: center;
+		justify-content: center;
+		font-family: "Museo Sans Condensed 500i";
+		font-size: 16px;
+		font-style: italic;
+		font-weight: 500;
+		line-height: 24px; /* 150% */
+		text-transform: uppercase;
+		padding: 4px 32px 0px;
+		position: relative;
+		transition: 0.2s;
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: -2px;
+			bottom: -2px;
+			opacity: 0;
+			z-index: -1;
+		}
+	}
+	&.btn-black {
+		color: #fff;
+		background-color: #000000;
+		&:hover {
+			box-shadow: 4px 4px 0px 0px #49D9B0;
+			transition: 0.2s;
+		}
+	}
+	&.btn-primary {
+		color: #000000;
+		background-color: $color_primary;
+		&:hover {
+			box-shadow: 4px 4px 0px 0px #000000;
+			transition: 0.2s;
+		}
+	}
+}
+.display-flex {
+	display: flex;
+}
