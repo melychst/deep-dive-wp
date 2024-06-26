@@ -15,7 +15,7 @@ add_action( version_compare('5.8', get_bloginfo('version'), '<=' ) ? 'block_cate
 function custom_acf_init() {
 
     $blocksArray = array(
-        'Main hero',
+        'Daily price',
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
