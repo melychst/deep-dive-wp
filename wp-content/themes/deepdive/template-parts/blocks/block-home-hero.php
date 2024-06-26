@@ -23,8 +23,7 @@
     <div class="column column-right">
         <div class="column-image-wrap">
             <?php
-                if( ($media_type == 'animation') && !empty($media_animation) ):
-                    
+                if( ($media_type == 'animation') && !empty($media_animation) ): 
             ?>
                 <div id="animation-careeras">
                     <dotlottie-player src="<?php echo $media_animation; ?>" background="transparent" speed="1"  loop autoplay></dotlottie-player>

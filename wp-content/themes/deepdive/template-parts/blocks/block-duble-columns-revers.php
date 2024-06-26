@@ -5,11 +5,10 @@
         if( !empty($left_column) ):
             $bg_type = $left_column['background_type'];
     ?>
-            <div class="column column-left" style="background-<?php echo $bg_type; ?>: <?php echo $bg_type == 'image' ? "url(". $left_column['background_image']['url'] .")" : "#". $left_column['
-background_color'] ?>;">
+            <div class="column column-left" style="background-<?php echo $bg_type; ?>: <?php echo $bg_type == 'image' ? "url(". $left_column['background_image']['url'] .")" : $left_column['background_color'] ?>;">
                 <div class="column-image-wrap">
                     <?php if( $left_column['image'] ): ?>
-                        <img src="<?php echo $left_column['image']['url']; ?>" alt="">
+                        <img src="<?php echo $left_column['image']['url']; ?>" alt="<?php echo $left_column['image']['alt']; ?>">
                     <?php endif; ?>
                 </div>
             </div>    

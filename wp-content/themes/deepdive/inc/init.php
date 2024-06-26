@@ -21,6 +21,9 @@ function custom_acf_init() {
         'Duble columns',
         'Duble columns revers',
         'Icons content',
+        'Page hero',
+        'Title section',
+        'FAQ'
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
