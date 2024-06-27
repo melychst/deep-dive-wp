@@ -23,7 +23,9 @@ function custom_acf_init() {
         'Icons content',
         'Page hero',
         'Title section',
-        'FAQ'
+        'FAQ',
+        'Location',
+        'Contact us'
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
