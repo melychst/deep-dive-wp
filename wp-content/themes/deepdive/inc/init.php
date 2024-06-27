@@ -22,10 +22,12 @@ function custom_acf_init() {
         'Duble columns revers',
         'Icons content',
         'Page hero',
+        'Page hero with animation',
         'Title section',
         'FAQ',
         'Location',
-        'Contact us'
+        'Contact us',
+        'Legal tabs'  
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
