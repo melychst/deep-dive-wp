@@ -13,11 +13,18 @@
             $border_css = "border-width: ". $border_top ."px ". $border_right ."px ". $border_bottom ."px 0px";
     ?>
             <div class="column column-left" style="background-<?php echo $bg_type; ?>: <?php echo $bg_type == 'image' ? "url(". $left_column['background_image']['url'] .")" : $left_column['background_color'] ?>; <?php echo $border_css;?>;">
-                <div class="column-image-wrap">
-                    <?php if( $left_column['image'] ): ?>
-                        <img src="<?php echo $left_column['image']['url']; ?>" alt="<?php echo $left_column['image']['alt']; ?>">
-                    <?php endif; ?>
-                </div>
+                    <div class="column-image-wrap">
+                        <?php if( ($left_column['media_type'] == 'image') && $left_column['image'] ): ?>
+                            <img src="<?php echo $left_column['image']['url']; ?>" alt="<?php echo $left_column['image']['alt']; ?>">
+                        <?php endif; ?>
+                        <?php if( ($left_column['media_type'] == 'animation') && ($left_column['animation_url'] != '') ): ?>
+                            <div id="animation-about-us">
+                                <dotlottie-player src="<?php echo $left_column['animation_url']; ?>" background="transparent" speed="1"  loop autoplay></dotlottie-player>
+                            </div>
+                        <?php endif; ?>                    
+                    </div>
+                
+
             </div>    
     <?php
         endif;

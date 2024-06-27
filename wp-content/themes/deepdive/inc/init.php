@@ -28,7 +28,8 @@ function custom_acf_init() {
         'Location',
         'Contact us',
         'Legal tabs',
-        'Career hero' 
+        'Career hero',
+        'About us hero' 
     );
     // check function exists
     if( function_exists('acf_register_block') ) {
