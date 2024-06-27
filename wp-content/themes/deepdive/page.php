@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="primary" class="content-area">
+<div id="primary" class="content-area">
 
     <?php if( have_posts() ):
       while( have_posts() ):
@@ -8,5 +8,5 @@
       endwhile; ?>
     <?php endif; ?>
 
-</section><!-- .content-area -->
+    </div><!-- .content-area -->
 <?php get_footer(); ?>
