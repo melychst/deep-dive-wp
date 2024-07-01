@@ -95,26 +95,31 @@ body {
             .column {
                 width: 50%;
                 display: flex;
-                padding-top: 118px;
-                padding-bottom: 112px;
+                // padding-top: 118px;
+                // padding-bottom: 112px;
                 &.column-left {
                     background-position: bottom left;
                     background-repeat: repeat-x;
                     border-top: 2px solid #000;
                     border-bottom: 2px solid #000;
                     background-size: contain;
+                    padding-top: 118px;
+                    padding-bottom: 112px;
                     .content-wrap {
                         margin-left: auto;
                         padding-right: 110px;
                     }
                 }
                 &.column-right {
-                    padding-left: 120px;
+                    // padding-left: 120px;
                     background-position: bottom left;
                     background-repeat: repeat-x;
                     border-top: 2px solid #000;
                     border-bottom: 2px solid #000;
                     border-left: 2px solid #000;
+                    .column-image-wrap {
+                        display: flex;
+                    }
                 }
                 .content-wrap {
                     width: 660px;
@@ -171,6 +176,8 @@ body {
                         background-repeat: repeat-x;
                         border-top: 2px solid #000;
                         border-left: 2px solid #000;
+                        padding-top: 118px;
+                        padding-bottom: 112px;
                         .content-wrap {
                             width: 520px;
                         }
@@ -240,6 +247,9 @@ body {
             .column-right {
                 background-color: $color_primary;
                 position: relative;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px !important;
                 &::before {
                     content: '';
                     display: block;
@@ -688,9 +698,6 @@ body {
                 }
                 .tabs-navigation {
                     .tab-name {
-                        color: var(--Base-800, #333);
-
-                        /* Desktop/Caption/C1 - Regular */
                         font-family: "Museo Sans Condensed 300i";
                         font-size: 24px;
                         line-height: 32px; /* 133.333% */
