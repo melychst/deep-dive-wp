@@ -1025,6 +1025,8 @@ body {
                 &.column-left {
                     background-color: $color_deep_blue;
                     color: #ffffff;
+                    border-top: 2px solid #000;
+                    border-bottom: 2px solid #000;
                     .content-wrap {
                         h1 {
                             margin-bottom: 18px;
@@ -1045,6 +1047,9 @@ body {
                     padding-left: 0px;
                     padding-bottom: 0px;
                     border: none;
+                    border-top: 2px solid #000;
+                    border-bottom: 2px solid #000;
+                    border-left: 2px solid #000;
                 }                
             }
 
