@@ -4,7 +4,7 @@
             <h1><?php echo get_field('title'); ?></h1>
             <div class="content"><?php echo get_field('description'); ?></div>
             <?php 
-                $btn_title = get_field('buttom_title');
+                $btn_title = get_field('button_title');
                 if( $btn_title != '' ):
             ?>
                     <div class="button-wrap">
@@ -25,7 +25,7 @@
             <?php
                 if( ($media_type == 'animation') && !empty($media_animation) ): 
             ?>
-                <div id="animation-careeras">
+                <div id="animation-home-hero">
                     <dotlottie-player src="<?php echo $media_animation; ?>" background="transparent" speed="1"  loop autoplay></dotlottie-player>
                 </div>
             <?php

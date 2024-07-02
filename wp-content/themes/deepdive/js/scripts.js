@@ -4,6 +4,7 @@
       //   careerasAnimation();
     });
     accordeon();
+    mobileNavigation();
 
     function accordeon() {
       jQuery('.accordeon-item').on('click', function () {
@@ -16,6 +17,14 @@
 
         jQuery(this).toggleClass('active');
       });
+    }
+
+    function mobileNavigation(){
+      jQuery('.burger-btn').on('click', function(){
+        jQuery('.mobile-navigation').toggleClass('active');
+        jQuery(this).toggleClass('active');
+        jQuery('body').toggleClass('hidden');
+      })
     }
 
 })(jQuery)
