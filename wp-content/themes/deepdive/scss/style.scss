@@ -27,6 +27,18 @@ body {
         font-weight: 500;
         line-height: 72px; /* 100% */
         text-transform: uppercase; 
+        @include media($xxl){
+            font-size: 56px;
+            line-height: 56px;
+        }
+        @include media($xl){
+            font-size: 42px;
+            line-height: 42px;
+        }
+        @include media($lg){
+            font-size: 40px;
+            line-height: 40px;
+        }
     }
     h3 {
         font-family: "Museo Sans Condensed 500i", sans-serif;
@@ -35,6 +47,18 @@ body {
         font-weight: 500;
         line-height: 56px; /* 100% */
         text-transform: uppercase;
+        @include media($xxl){
+            font-size: 46px;
+            line-height: 46px;
+        }
+        @include media($xl){
+            font-size: 38px;
+            line-height: 38px;
+        }
+        @include media($lg){
+            font-size: 32px;
+            line-height: 32px;
+        }
     }
     main {
        overflow: hidden; 
@@ -56,6 +80,9 @@ body {
         }
         .navigation-wrap {
             text-align: center;
+            @include media($xl){
+                display: none;
+            }
             li {
                 list-style: none;
                 display: inline-block;
@@ -123,8 +150,17 @@ body {
                 }
                 .content-wrap {
                     width: 660px;
+                    @include media($xxl){
+                        width: 90%;
+                    }
                     h3 {
                         margin-bottom: 24px;
+                    }
+                    p {
+                        margin-bottom: 25px;
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
                     }
                 }
                 &.column-image {
@@ -144,6 +180,17 @@ body {
                             padding-left: 60px;
                             margin-left: auto;
                             position: relative;
+                            img {
+                                max-width: 100%;
+                            }
+                            @include media($xxl){
+                                width: 90%;
+                                padding-left: 0px;
+                                padding-right: 50px;
+                            }
+                            @include media($xl){
+                                padding-right: 32px;
+                            }
                         }
                         .img-before {
                             position: absolute;
@@ -178,8 +225,17 @@ body {
                         border-left: 2px solid #000;
                         padding-top: 118px;
                         padding-bottom: 112px;
+                        @include media($xxl){
+                            padding-left: 50px;
+                        }
+                         @include media($xl){
+                            padding-left: 32px;
+                        }
                         .content-wrap {
                             width: 520px;
+                            @include media($xxl){
+                                width: 90%;
+                            }
                         }
                         .content {
                             padding-right: 30px;
@@ -232,36 +288,57 @@ body {
                         }
                     } 
                 }
-            }           
+                #animation-about-us {
+                    position: absolute;
+                    right: 56px;
+                    bottom: -48px;
+                }
+            } 
+            &.about-us {
+                .column {
+                    &.column-right {
+                        padding-bottom: 156px;
+                    }
+                }
+            }          
         }
         &.home-hero {
-            .column-left {
-                background-color: $color_deep_blue;
-                padding-bottom: 166px;
-                padding-top: 122px;
-                color: #ffffff;
-                .content-wrap {
-                    padding-right: 150px !important;
+            .column {
+                &.column-left {
+                    background-color: $color_deep_blue;
+                    padding-bottom: 166px;
+                    padding-top: 122px;
+                    color: #ffffff;
+                    @include media($xxl){
+                        padding-top: 80px;
+                        padding-bottom: 40px;
+                    }
+                    .content-wrap {
+                        padding-right: 150px;
+                        @include media($xxl){
+                            padding-right: 100px;
+                        }
+                    }
                 }
-            }
-            .column-right {
-                background-color: $color_primary;
-                position: relative;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                padding-left: 0px !important;
-                &::before {
-                    content: '';
-                    display: block;
-                    width: 100%;
-                    height: 202px;
-                    position: absolute;
-                    bottom: 0px;
-                    left: 0px;
-                    background-image: url(../images/wavles_before.png);
-                    background-position: bottom left;
-                    background-repeat: repeat-x;
-                }
+                &.column-right {
+                    background-color: $color_primary;
+                    position: relative;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    padding-left: 0px !important;
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 202px;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        background-image: url(../images/wavles_before.png);
+                        background-position: bottom left;
+                        background-repeat: repeat-x;
+                    }
+                }                
             }
             h1 {
                 margin-bottom: 12px;
@@ -275,6 +352,17 @@ body {
                 top: 152px;
                 left: 48.6%;
                 transform: translate(-50%, 0%);
+                width: 233px;
+                height: 456px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+                @include media($xxl){
+                    width: 150px;
+                    height: auto;
+                    top: 200px;
+                }
             }
         }
         &.content-columns {
@@ -339,6 +427,12 @@ body {
                     .icon-column {
                         width: 380px;
                         margin: 0px 12px 48px;
+                        @include media($xl){
+                            width: 200px;
+                        }
+                        @include media($lg){
+                            width: 118px;
+                        }
                         .icon {
                             width: 64px;
                             height: 64px;
@@ -358,6 +452,10 @@ body {
                             font-weight: 300;
                             line-height: 32px; /* 133.333% */
                             text-transform: uppercase;
+                            @include media($lg){
+                                font-size: 20px;
+                                line-height: 28px;
+                            }
                         }
                     }
                 }
@@ -727,6 +825,15 @@ body {
                 width: 100%;
                 height: 552px;
                 top: 0px;
+            }
+        }
+        &.about-us-columns {
+            .column {
+                &.column-left {
+                    .content-wrap {
+                        padding-right: 282px;
+                    }
+                }
             }
         }
     }

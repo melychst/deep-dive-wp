@@ -1,4 +1,4 @@
-<section class="columns-duble revers">
+<section class="columns-duble revers about-us">
 
     <?php
         $left_column = get_field('left_column');
@@ -18,7 +18,7 @@
                         <img src="<?php echo $left_column['image']['url']; ?>" alt="<?php echo $left_column['image']['alt']; ?>">
                     <?php endif; ?>
                     <?php if( ($left_column['media_type'] == 'animation') && ($left_column['animation_url'] != '') ): ?>
-                        <div id="animation-duble-column">
+                        <div id="animation-about-us">
                             <dotlottie-player src="<?php echo $left_column['animation_url']; ?>" background="transparent" speed="1"  loop autoplay></dotlottie-player>
                         </div>
                     <?php endif; ?>                    
