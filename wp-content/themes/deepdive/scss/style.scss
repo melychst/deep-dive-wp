@@ -234,6 +234,8 @@ body {
                     @include media($xl){
                         padding-top: 79px;
                         padding-bottom: 90px;
+                        border-top: 1px solid #000;
+                        border-bottom: 1px solid #000;
                     }
                     @include media($md){
                         padding-top: 64px;
@@ -260,6 +262,10 @@ body {
                     border-top: 2px solid #000;
                     border-bottom: 2px solid #000;
                     border-left: 2px solid #000;
+                    @include media($xl){
+                        border-top: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                    }
                     .column-image-wrap {
                         display: flex;
                     }
@@ -305,6 +311,7 @@ body {
                         @include media($xl){
                             padding-bottom: 40px;
                             padding-top: 47px;
+                            border-top: 1px solid #000;
                         }
                         @include media($md){
                             order: 2;
@@ -345,14 +352,43 @@ body {
                         &.column-left-title {
                             border-top: none;
                             padding-bottom: 51px;
+                            @include media($xl){
+                                padding-top: 64px;
+                                padding-bottom: 32px;
+                            }
+                            @include media($md){
+                                order: 1;
+                                padding-bottom: 15px;
+                            }
                             .content-wrap {
                                 padding-right: 0px;
+                                @include media($xl){
+                                    padding-right: 33px;
+                                }
+                                @include media($md){
+                                    padding-right: 16px;
+                                }
                                 h1 {
                                     color: #ffffff;
                                     margin-bottom: 51px;
+                                    @include media($xl){
+                                        padding-right: 50px;
+                                        margin-bottom: 84px;
+                                    }
+                                    @include media($md){
+                                        font-size: 38px;
+                                        line-height: 40px;
+                                        padding-right: 0px;
+                                        margin-bottom: 40px;
+                                    }
                                 }
                                 .column-image-wrap {
                                     padding-left: 0px;
+                                    @include media($xl){
+                                        width: 100%;
+                                        padding-right: 0px;
+                                        display: flex;
+                                    }
                                 }
                             }
                         }
@@ -371,6 +407,8 @@ body {
                          @include media($xl){
                             padding-left: 0px;
                             padding-top: 80px;
+                            border-top: 1px solid #000;
+                            border-left: 1px solid #000;
                         }
                         @include media($md){
                             order: 1;
@@ -398,13 +436,56 @@ body {
                     }
                     &.column-right-contacts {
                         padding-left: 58px;
+                        @include media($xl){
+                            padding-left: 32px;
+                            padding-bottom: 55px;
+                        }
+                        @include media($md){
+                            order: 2;
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        }
+                        .top-row {
+                            @include media($xl){
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 15px;
+                            }
+                            @include media($md){
+                                display: block;
+                                margin-bottom: 32px;
+                            }
+                        }
+                        .content-wrap {
+                            @include media($xl){
+                                padding-left: 0px;
+                                // width: 98%;
+                            }
+                            @include media($md){
+                                padding-left: 16px;
+                            }
+                        }
                         .contacts {
                             font-family: "Museo Sans Condensed 300i";
                             font-size: 24px;
                             line-height: 32px; /* 133.333% */
                             text-transform: uppercase;
+                            @include media($xl){
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
+                            @include media($md){
+                                font-size: 20px;
+                                line-height: 28px; /* 133.333% */
+                            }
                             .contacts-block {
                                 margin-bottom: 24px;
+                                @include media($xl){
+                                    margin-bottom: 16px;
+                                }
+                                @include media($md){
+                                    margin-bottom: 24px;
+                                }
                                 span {
                                     display: block;
                                 }
@@ -413,10 +494,31 @@ body {
                         .social-links {
                             display: flex;
                             margin-bottom: 56px;
+                            @include media($xl){
+                                flex-direction: column;
+                                margin-bottom: 0px;
+                                position: relative;
+                                right: -3px;
+                            }
+                            @include media($md){
+                                flex-direction: row;
+                                right: initial;
+                            }
                             .social-item {
                                 margin-right: 24px;
+                                @include media($xl){
+                                    margin-right: 0px;
+                                    margin-bottom: 17px;
+                                }
+                                @include media($md){
+                                    margin-right: 24px;
+                                    margin-bottom: 0px;
+                                }
                                 &:last-child {
                                     margin-right: 0px;
+                                    @include media($xl){
+                                        margin-bottom: 0px;
+                                    }
                                 }
                             }
                         }
@@ -426,13 +528,23 @@ body {
                                 font-size: 16px;
                                 line-height: 24px; /* 150% */    
                                 margin-bottom: 8px;  
-                                text-transform: uppercase;                  
+                                text-transform: uppercase; 
+                                @include media($xl){
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }                 
                                 span {
                                     &.day {
                                         font-family: "Museo Sans Condensed 300i";
                                         width: 152px;
                                         margin-right: 35px;
-
+                                        @include media($xl){
+                                            width: 98px;
+                                            margin-right: 24px;
+                                        }
+                                        @include media($md){
+                                            width: 154px;
+                                        }
                                     }
                                     &.time {
                                         font-family: "Museo Sans Condensed 900i";
@@ -878,13 +990,40 @@ body {
         &.accordeons {
             padding-top: 122px;
             padding-bottom: 120px;
+            @include media($xl){
+                padding-top: 82px;
+                padding-bottom: 71px;
+            }
+            @include media($md){
+                padding-top: 65px;
+                padding-bottom: 56px;
+            }
             .columns {
                 justify-content: space-between;
+                @include media($md){
+                   flex-wrap: wrap;
+                }
                 .column-left {
                     width: 340px;
+                    @include media($xxl){
+                        width: 250px;
+                    }
+                    @include media($md){
+                        width: 100%;
+                    }
                 }
                 .column-right {
                     width: 872px;
+                    @include media($xxl){
+                        width: 600px;
+                    }
+                    @include media($xl){
+                        width: 432px;
+                    }
+                    @include media($md){
+                        width: 100%;
+                        padding-top: 40px;
+                    }
                 }
                 .accordeons-wrap {
                     .accordeon-item {
@@ -917,6 +1056,15 @@ body {
                         padding-right: 50px;
                         padding-left: 8px;
                         position: relative;
+                        @include media($xl){
+                            font-size: 20px;
+                            line-height: 28px;
+                            padding-left: 8px;
+                            padding-right: 30px;
+                        }
+                        @include media($md){
+                            padding-right: 40px;
+                        }
                         &::before {
                             content: '';
                             width: 24px;
@@ -929,6 +1077,9 @@ body {
                             top: 16px;
                             transform: rotate(180deg);
                             transition: 0.2s;
+                            @include media($md){
+                                top: 13px;
+                            }
                         }
                     }
                     .content {
@@ -957,6 +1108,14 @@ body {
         &.daily-price {
             padding-top: 116px;
             padding-bottom: 120px;
+            @include media($xl){
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            @include media($md){
+                padding-top: 64px;
+                padding-bottom: 23px;
+            }
             .content-wrap {
                 text-align: center;
             }
@@ -965,9 +1124,15 @@ body {
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 76px;
+                @include media($xl){
+                    margin-top: 40px;
+                }
+                @include media($md){
+                    // justify-content: space-between;
+                }
                 .price-content {
                     margin-right: 74px;
-                    color: var(--Base-800, #333);
+                    color: #333;
                     font-family: "Museo Sans Condensed 300i";
                     font-size: 24px;
                     font-style: italic;
@@ -975,14 +1140,45 @@ body {
                     line-height: 32px; /* 133.333% */
                     text-transform: uppercase;
                     text-align: center;
+                    @include media($xl){
+                        margin-right: 40px;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    @include media($md){
+                        margin-right: 0px;
+                        font-size: 20px;
+                        line-height: 28px;
+                        margin-bottom: 24px;
+                    }
                     &:last-child {
                         margin-right: 0px;
+                    }
+                    &:nth-child(2) {
+                        @include media($md){
+                            margin: 0px 47px;
+                        }
+                    }
+                    &:nth-child(5) {
+                        @include media($md){
+                            margin: 0px 47px;
+                        }
                     }
                     .price-img {
                         width: 93px;
                         height: 155px;
                         text-align: center;
                         margin-bottom: 15px;
+                        @include media($xl){
+                            width: 66px;
+                            height: 111px;
+                            margin-bottom: 16px;
+                        }
+                        @include media($md){
+                            width: 83px;
+                            height: 136px;
+                            margin-bottom: 16px;                           
+                        }
                         img {
                             max-width: 100%;
                         }
@@ -1117,9 +1313,24 @@ body {
                     color: #ffffff;
                     border-top: 2px solid #000;
                     border-bottom: 2px solid #000;
+                    @include media($xl){
+                        padding-bottom: 78px;
+                        border-top: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                    }
+                    @include media($md){
+                        padding-bottom: 61px;
+                    }
                     .content-wrap {
                         h1 {
                             margin-bottom: 18px;
+                            @include media($xl){
+                                margin-bottom: 16px;
+                            }
+                            @include media($md){
+                                font-size: 40px;
+                                line-height: 40px;
+                            }
                         }
                         .content {
                             font-size: 18px;
@@ -1128,6 +1339,16 @@ body {
                             line-height: 26px;
                             padding-right: 30px;
                             margin-bottom: 41px;
+                            @include media($xl){
+                                font-size: 12px;
+                                line-height: 20px;
+                                margin-bottom: 24px;
+                            }
+                            @include media($md){
+                                font-size: 16px;
+                                line-height: 24px;
+                                padding-right: 0px;
+                            }
                         }
                     }
                 }
@@ -1140,6 +1361,10 @@ body {
                     border-top: 2px solid #000;
                     border-bottom: 2px solid #000;
                     border-left: 2px solid #000;
+                    @include media($xl){
+                        border-top: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                    }
                 }                
             }
 
