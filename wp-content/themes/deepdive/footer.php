@@ -57,7 +57,12 @@
                             <div class="subscription-wrap">
                                 <div class="title">Sign up to our newsletter and stay up to date</div>
                                 <div class="form-wrap">
-                                    <form action=""></form>
+                                    <?php
+                                        $form = get_field('footer_form', 'option');
+                                        if( $form != '' ):
+                                           echo do_shortcode( $form );
+                                        endif;
+                                    ?>
                                 </div>
                             </div>
                         </div>

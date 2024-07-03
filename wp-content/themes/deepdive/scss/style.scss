@@ -231,9 +231,20 @@ body {
                     background-size: contain;
                     padding-top: 118px;
                     padding-bottom: 112px;
+                    @include media($xl){
+                        padding-top: 79px;
+                        padding-bottom: 90px;
+                    }
+                    @include media($md){
+                        padding-top: 64px;
+                        padding-bottom: 65px;
+                    }
                     .content-wrap {
                         margin-left: auto;
                         padding-right: 110px;
+                        @include media($xl){
+                            padding-right: 40px;
+                        }
                         @include media($md){
                             width: 375px;
                             padding-right: 16px;
@@ -480,6 +491,7 @@ body {
                     padding-top: 0px;
                     padding-bottom: 0px;
                     padding-left: 0px !important;
+                    overflow: hidden;
                     @include media($md){
                         height: 375px;
                     }
@@ -754,13 +766,39 @@ body {
         &.page-hero {
             background-color: $color_deep_blue;
             padding: 125px 0px 117px;
+            @include media($xl){
+                padding: 83px 0px 79px;
+            }
+            @include media($md){
+                padding: 64px 0px 63px;
+            }
             .content-wrap {
                 text-align: center;
                 width: 820px;
                 margin: 0 auto;
+                @include media($xl){
+                    width: 512px;
+                }
+                @include media($md){
+                    width: 100%;
+                }
                 h1 {
                     margin-bottom: 34px;
                     color: #ffffff;
+                    @include media($xl){
+                        margin-bottom: 20px;
+                    }
+                    @include media($md){
+                        text-align: left;
+                        font-size: 40px;
+                        line-height: 40px; /* 100% */
+                        margin-bottom: 24px;
+                    }
+                }
+                .button-wrap {
+                    @include media($md){
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -770,10 +808,30 @@ body {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            @include media($xl){
+                padding-top: 82px;
+                padding-bottom: 75px;
+            }
+            @include media($md){
+                padding-top: 119px;
+                padding-bottom: 110px;
+            }
+            .container {
+                z-index: 5;
+            }
             .content-wrap {
                 width: 685px;
                 margin: 0 auto;
                 color: #ffffff;
+                @include media($xl){
+                    width: 522px;
+                }
+                @include media($lg){
+                    width: 400px;
+                }
+                @include media($md){
+                    width: 100%;
+                }
                 .title {
                     text-align: center;
                     font-family: "Museo Sans Condensed 900i";
@@ -782,6 +840,38 @@ body {
                     font-weight: 900;
                     line-height: 72px; /* 100% */
                     text-transform: uppercase;
+                    @include media($xl){
+                        font-size: 40px;
+                        line-height: 40px; /* 100% */
+                    }
+                    @include media($xl){
+                        font-size: 48px;
+                        line-height: 48px; /* 100% */
+                    }
+                }
+            }
+            .image-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &.desktop-bg {
+                    @include media($md){
+                        display: none;
+                    }
+                }
+                &.mobile-bg {
+                    display: none;
+                    @include media($md){
+                        display: block;
+                    }
                 }
             }
         }
@@ -1218,7 +1308,7 @@ body {
                 font-weight: 500;
                 line-height: 48px; /* 100% */
                 text-transform: uppercase;
-                margin-bottom: 40px;
+                margin-bottom: 41px;
                 @include media($xxl){
                     font-size: 40px;
                     line-height: 40px;
@@ -1254,6 +1344,54 @@ body {
             }
             @include media($md){
                 height: 54px;
+            }
+            form {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            input[type=email] {
+                width: 312px;
+                height: 100%;
+                padding: 18px 16px 14px 22px;
+                background-color: #ffffff;
+                border: none;
+                border-right: 2px solid #000000;
+                font-family: "Arboria-Book", sans-serif;
+                font-size: 18px;
+                line-height: 26px;
+                color: #999999;
+                @include media($xl){
+                    width: 298px;
+                    padding: 15px 16px 11px 22px;
+                }
+                @include media($md){
+                    width: 211px;
+                    padding: 18px 16px 14px 22px;
+                }
+            }
+            input[type=submit] {
+                width: 131px;
+                height: 100%;
+                display: flex;
+                padding: 17px 30px 13px 30px;
+                justify-content: center;
+                align-items: center;
+                background-color: #CFFF5E;
+                color: #000000;
+                font-family: "Museo Sans Condensed 500i";
+                font-size: 16px;
+                line-height: 24px; /* 150% */
+                text-transform: uppercase;
+                border: none;
+                @include media($xl){
+                    padding: 14px 30px 10px 30px;
+                }
+                @include media($md){
+                    padding: 17px 30px 13px 30px;
+                }
+            }
+            .wpcf7-response-output {
+                margin: 0px;
             }
         }
         .contacts {

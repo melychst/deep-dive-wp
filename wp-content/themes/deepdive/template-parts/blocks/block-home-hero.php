@@ -14,6 +14,16 @@
                 endif;
             ?>
         </div>
+        <?php
+            $additional_image = get_field('aditional_image');
+            if( !empty($additional_image) ):
+        ?>
+                <div class="image-bg-wrap">
+                    <img src="<?php echo $additional_image['url']; ?>" alt="<?php echo $additional_image['alt']; ?>">
+                </div>
+        <?php
+            endif;
+        ?>
     </div>
     <?php
         $media_type = get_field('media_container');
@@ -33,14 +43,4 @@
             ?>
         </div>
     </div>
-    <?php
-        $additional_image = get_field('aditional_image');
-        if( !empty($additional_image) ):
-    ?>
-            <div class="image-bg-wrap">
-                <img src="<?php echo $additional_image['url']; ?>" alt="<?php echo $additional_image['alt']; ?>">
-            </div>
-    <?php
-        endif;
-    ?>
 </section>

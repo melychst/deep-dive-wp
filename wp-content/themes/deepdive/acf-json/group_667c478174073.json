@@ -127,6 +127,26 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_66854b1532295",
+            "label": "Footer form",
+            "name": "footer_form",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_667c47c9f5a30",
             "label": "Footer image",
             "name": "footer_image",
@@ -338,5 +358,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719490075
+    "modified": 1720011564
 }
