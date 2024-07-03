@@ -25,6 +25,16 @@
                         endif;
                     ?>
                 </div>
+                <div class="image-wrap mobile-img">
+                    <?php
+                        $image = get_field('image');
+                        if( $image ):
+                    ?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <?php
+                        endif;
+                    ?>
+                </div>
             </div>
         </div>
     </div>

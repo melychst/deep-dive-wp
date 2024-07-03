@@ -1275,20 +1275,73 @@ body {
               max-width: 100%; }
     body section.contact-us {
       background-color: #CFFF5E;
-      padding-top: 116px;
-      padding-bottom: 114px; }
+      padding-top: 120px;
+      padding-bottom: 88px; }
+      @media only screen and (max-width: 1023px) {
+        body section.contact-us {
+          padding-top: 83px;
+          padding-bottom: 50px; } }
+      @media only screen and (max-width: 767px) {
+        body section.contact-us {
+          padding-bottom: 24px; } }
+      @media only screen and (max-width: 767px) {
+        body section.contact-us {
+          padding-top: 67px;
+          padding-bottom: 50px; } }
+      @media only screen and (max-width: 767px) {
+        body section.contact-us .columns {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
       body section.contact-us .column {
         width: 50%; }
+        @media only screen and (max-width: 767px) {
+          body section.contact-us .column {
+            width: 100%; } }
         body section.contact-us .column.column-left h1 {
-          margin-bottom: 7px; }
+          margin-bottom: 3px; }
+          @media only screen and (max-width: 1023px) {
+            body section.contact-us .column.column-left h1 {
+              margin-bottom: 37px; } }
+          @media only screen and (max-width: 767px) {
+            body section.contact-us .column.column-left h1 {
+              margin-bottom: 32px; } }
         body section.contact-us .column.column-left .image-wrap {
-          padding-left: 29px; }
+          padding-left: 29px;
+          position: relative; }
+          @media only screen and (max-width: 1023px) {
+            body section.contact-us .column.column-left .image-wrap {
+              padding-left: 0px;
+              width: 305px;
+              left: -5px; } }
+          @media only screen and (max-width: 767px) {
+            body section.contact-us .column.column-left .image-wrap {
+              display: none; } }
+          body section.contact-us .column.column-left .image-wrap img {
+            max-width: 100%;
+            max-height: 100%; }
+        body section.contact-us .column.column-right .image-wrap {
+          display: none;
+          position: relative;
+          margin-left: 14px;
+          width: 292px; }
+          @media only screen and (max-width: 767px) {
+            body section.contact-us .column.column-right .image-wrap {
+              display: block; } }
+          body section.contact-us .column.column-right .image-wrap img {
+            max-width: 100%;
+            max-height: 100%; }
       body section.contact-us .contact-form-wrap {
         padding-left: 11px;
-        padding-top: 2px; }
+        padding-top: 0px; }
+        @media only screen and (max-width: 767px) {
+          body section.contact-us .contact-form-wrap {
+            padding-left: 0px; } }
         body section.contact-us .contact-form-wrap .field-wrap {
           width: 528px;
           position: relative; }
+          @media only screen and (max-width: 1360px) {
+            body section.contact-us .contact-form-wrap .field-wrap {
+              width: 100%; } }
           body section.contact-us .contact-form-wrap .field-wrap .input-field {
             width: 100%;
             background-color: transparent;
@@ -1301,6 +1354,13 @@ body {
             padding-top: 32px;
             padding-bottom: 16px;
             margin-bottom: 7px; }
+            @media only screen and (max-width: 1023px) {
+              body section.contact-us .contact-form-wrap .field-wrap .input-field {
+                font-size: 16px;
+                line-height: 24px;
+                padding-top: 21px;
+                padding-bottom: 7px;
+                margin-bottom: 11px; } }
             body section.contact-us .contact-form-wrap .field-wrap .input-field::-webkit-input-placeholder {
               font-family: "Arboria-Book", sans-serif;
               color: #000000; }
@@ -1326,17 +1386,32 @@ body {
               color: #000000;
               font-family: "Arboria-Book", sans-serif; }
         body section.contact-us .contact-form-wrap .subscribe-field {
-          padding-left: 32px;
-          margin-top: 18px; }
+          padding-left: 15px;
+          margin-top: 17px; }
+          @media only screen and (max-width: 1023px) {
+            body section.contact-us .contact-form-wrap .subscribe-field {
+              margin-top: 12px;
+              padding-left: 21px; } }
+          @media only screen and (max-width: 767px) {
+            body section.contact-us .contact-form-wrap .subscribe-field {
+              padding-left: 16px; } }
         body section.contact-us .contact-form-wrap .submit-field {
-          margin-top: 40px; }
-        body section.contact-us .contact-form-wrap .label {
+          margin-top: 38px; }
+          @media only screen and (max-width: 1023px) {
+            body section.contact-us .contact-form-wrap .submit-field {
+              margin-top: 32px; } }
+        body section.contact-us .contact-form-wrap label {
           font-size: 14px;
           line-height: 22px;
-          padding-right: 50px;
+          padding-right: 40px;
           font-family: "Arboria-Book", sans-serif;
           display: block;
           cursor: pointer; }
+          @media only screen and (max-width: 1023px) {
+            body section.contact-us .contact-form-wrap label {
+              font-size: 12px;
+              line-height: 20px;
+              padding-right: 0px; } }
         body section.contact-us .contact-form-wrap input[type=checkbox] {
           position: absolute;
           opacity: 0; }
@@ -1357,15 +1432,29 @@ body {
           /* 150% */
           text-transform: uppercase;
           border: none; }
-        body section.contact-us .contact-form-wrap span.checked {
-          width: 16px;
-          height: 16px;
-          background-color: #000000;
-          position: absolute;
-          top: 3px;
-          left: 2px;
-          display: block; }
-          body section.contact-us .contact-form-wrap span.checked::before {
+          @media only screen and (max-width: 1023px) {
+            body section.contact-us .contact-form-wrap input[type=submit] {
+              height: 52px; } }
+          @media only screen and (max-width: 767px) {
+            body section.contact-us .contact-form-wrap input[type=submit] {
+              padding: 16px 32px 18px; } }
+        body section.contact-us .contact-form-wrap input[type=checkbox] + span {
+          position: relative; }
+          body section.contact-us .contact-form-wrap input[type=checkbox] + span::after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #000000;
+            position: absolute;
+            top: -2px;
+            left: -32px;
+            display: block; }
+            @media only screen and (max-width: 1023px) {
+              body section.contact-us .contact-form-wrap input[type=checkbox] + span::after {
+                top: 0px;
+                left: -32px; } }
+          body section.contact-us .contact-form-wrap input[type=checkbox] + span::before {
             content: '';
             width: 9px;
             height: 5px;
@@ -1376,12 +1465,16 @@ body {
             display: block;
             position: absolute;
             z-index: 5;
-            top: 3px;
-            left: 3px;
+            top: 1px;
+            left: -29px;
             opacity: 0;
             -webkit-transition: 0.2s;
             transition: 0.2s; }
-        body section.contact-us .contact-form-wrap #subscribe:checked ~ .checked::before {
+            @media only screen and (max-width: 1023px) {
+              body section.contact-us .contact-form-wrap input[type=checkbox] + span::before {
+                top: 3px;
+                left: -29px; } }
+        body section.contact-us .contact-form-wrap input[type=checkbox]:checked + span::before {
           opacity: 1;
           -webkit-transition: 0.2s;
           transition: 0.2s; }
