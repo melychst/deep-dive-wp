@@ -1672,6 +1672,8 @@ body {
           line-height: 28px; } }
       body section.legal-tabs .columns .tabs-navigation .tab-name.active {
         font-family: "Museo Sans Condensed 900i"; }
+      body section.legal-tabs .columns .tabs-navigation .tab-name:hover {
+        font-family: "Museo Sans Condensed 900i"; }
     body section.legal-tabs .columns .tabs-content .tab-content {
       display: none; }
       body section.legal-tabs .columns .tabs-content .tab-content.active {

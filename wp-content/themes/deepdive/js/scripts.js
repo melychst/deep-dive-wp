@@ -5,6 +5,7 @@
     });
     accordeon();
     mobileNavigation();
+    termTabs();
 
     function accordeon() {
       jQuery('.accordeon-item').on('click', function () {
@@ -27,4 +28,16 @@
       })
     }
 
+    function termTabs(){
+      jQuery('[data-tab-name-id]').on('click', function(){
+        var tabId = jQuery(this).data('tab-name-id');
+        jQuery('[data-tab-name-id]').removeClass('active');
+        jQuery(this).addClass('active');
+        console.log(tabId);
+
+        jQuery('[data-tab-contant-id]').removeClass('active');
+        jQuery('[data-tab-contant-id='+ tabId +']').addClass('active');
+
+      });
+    }
 })(jQuery)
