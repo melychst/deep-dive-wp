@@ -1593,6 +1593,8 @@ body {
         body section.page-content {
           padding-top: 66px;
           padding-bottom: 40px; } }
+      body section.page-content img {
+        max-width: 100%; }
       body section.page-content h3 {
         font-family: "Museo Sans Condensed 500i";
         font-size: 48px;
