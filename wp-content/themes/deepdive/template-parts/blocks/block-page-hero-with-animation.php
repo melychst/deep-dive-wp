@@ -3,7 +3,6 @@
         <div class="content-wrap">
             <h1><?php echo get_field('title'); ?></h1>
         </div>
-    </div>
         <div class="animation-hero">
             <?php
                 $animation = get_field('animation');
@@ -13,5 +12,7 @@
             <?php
                 endif;
             ?>
-        </div>            
+        </div>          
+    </div>
+          
 </section>

@@ -300,6 +300,16 @@ body {
       list-style: none;
       display: inline-block;
       margin: 0px 4px; }
+      body header .navigation-wrap li.current_page_item a:before {
+        content: '';
+        width: calc(100% - 12px);
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); }
       body header .navigation-wrap li a {
         font-family: "Museo Sans Condensed 300i";
         font-size: 16px;
@@ -311,16 +321,6 @@ body {
         padding: 0px 6px;
         display: inline-block;
         position: relative; }
-      body header .navigation-wrap li.active a:before {
-        content: '';
-        width: calc(100% - 12px);
-        height: 1px;
-        background-color: #000;
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%); }
   body header .mobile-navigation {
     position: absolute;
     width: 100%;
@@ -689,8 +689,35 @@ body {
         position: absolute;
         right: 56px;
         bottom: -48px; }
+        @media only screen and (max-width: 1023px) {
+          body section.columns-duble.revers #animation-about-us {
+            width: 100%;
+            right: 46px;
+            bottom: 45px; } }
+        @media only screen and (max-width: 767px) {
+          body section.columns-duble.revers #animation-about-us {
+            position: static; } }
+      @media only screen and (max-width: 767px) {
+        body section.columns-duble.about-us .column.column-left {
+          padding-top: 24px;
+          padding-bottom: 69px; } }
+      @media only screen and (max-width: 1023px) {
+        body section.columns-duble.about-us .column.column-left .column-image-wrap {
+          width: 256px;
+          padding-right: 0px; } }
+      @media only screen and (max-width: 767px) {
+        body section.columns-duble.about-us .column.column-left .column-image-wrap {
+          width: 300px; } }
+      body section.columns-duble.about-us .column.column-left .column-image-wrap img {
+        max-width: 100%; }
       body section.columns-duble.about-us .column.column-right {
         padding-bottom: 156px; }
+        @media only screen and (max-width: 1023px) {
+          body section.columns-duble.about-us .column.column-right {
+            padding-bottom: 79px; } }
+        @media only screen and (max-width: 767px) {
+          body section.columns-duble.about-us .column.column-right {
+            padding-bottom: 30px; } }
     body section.home-hero .column.column-left {
       background-color: #0019C7;
       padding-bottom: 166px;
@@ -1195,11 +1222,35 @@ body {
       padding-top: 85px;
       padding-bottom: 119px;
       background-color: #0019C7; }
+      @media only screen and (max-width: 1023px) {
+        body section.page-404 {
+          padding-top: 82px;
+          padding-bottom: 79px; } }
+      @media only screen and (max-width: 767px) {
+        body section.page-404 {
+          padding-top: 65px;
+          padding-bottom: 53px; } }
       body section.page-404 .content-wrap {
         color: #ffffff;
-        text-align: center; }
-        body section.page-404 .content-wrap .image-wrap {
-          margin: 0 auto 46px; }
+        text-align: center;
+        width: 930px;
+        margin: 0 auto; }
+        @media only screen and (max-width: 1023px) {
+          body section.page-404 .content-wrap {
+            width: 510px; } }
+        @media only screen and (max-width: 767px) {
+          body section.page-404 .content-wrap {
+            width: 343px; } }
+        body section.page-404 .content-wrap h3 {
+          margin-top: 25px; }
+          @media only screen and (max-width: 1023px) {
+            body section.page-404 .content-wrap h3 {
+              margin-top: 18px; } }
+          @media only screen and (max-width: 767px) {
+            body section.page-404 .content-wrap h3 {
+              font-size: 24px;
+              line-height: 32px;
+              margin-top: 10px; } }
     body section.daily-price {
       padding-top: 116px;
       padding-bottom: 120px; }
@@ -1534,6 +1585,14 @@ body {
       padding-top: 120px;
       padding-bottom: 96px;
       color: #333; }
+      @media only screen and (max-width: 1023px) {
+        body section.page-content {
+          padding-top: 81px;
+          padding-bottom: 56px; } }
+      @media only screen and (max-width: 767px) {
+        body section.page-content {
+          padding-top: 66px;
+          padding-bottom: 40px; } }
       body section.page-content h3 {
         font-family: "Museo Sans Condensed 500i";
         font-size: 48px;
@@ -1541,6 +1600,10 @@ body {
         /* 100% */
         text-transform: uppercase;
         margin-bottom: 24px; }
+        @media only screen and (max-width: 1023px) {
+          body section.page-content h3 {
+            font-size: 32px;
+            line-height: 32px; } }
       body section.page-content h4 {
         font-family: "Museo Sans Condensed 300i";
         font-size: 24px;
@@ -1548,16 +1611,49 @@ body {
         /* 133.333% */
         text-transform: uppercase;
         margin-bottom: 8px; }
+        @media only screen and (max-width: 1023px) {
+          body section.page-content h4 {
+            font-size: 20px;
+            line-height: 28px; } }
       body section.page-content p {
         margin-bottom: 24px; }
+        @media only screen and (max-width: 1023px) {
+          body section.page-content p {
+            font-size: 16px;
+            line-height: 24px; } }
       body section.page-content ul, body section.page-content ol {
         padding-left: 23px;
         margin-bottom: 24px; }
+        @media only screen and (max-width: 1023px) {
+          body section.page-content ul, body section.page-content ol {
+            font-size: 16px;
+            line-height: 24px; } }
+    @media only screen and (max-width: 767px) {
+      body section.legal-tabs .columns {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
     body section.legal-tabs .columns .column-left {
       width: 340px; }
+      @media only screen and (max-width: 1023px) {
+        body section.legal-tabs .columns .column-left {
+          width: 182px; } }
+      @media only screen and (max-width: 767px) {
+        body section.legal-tabs .columns .column-left {
+          width: 100%; } }
     body section.legal-tabs .columns .column-right {
       width: calc(100% - 340px);
       padding-left: 110px; }
+      @media only screen and (max-width: 1023px) {
+        body section.legal-tabs .columns .column-right {
+          width: calc(100% - 182px);
+          padding-left: 67px; } }
+      @media only screen and (max-width: 767px) {
+        body section.legal-tabs .columns .column-right {
+          width: 100%;
+          padding-left: 0px; } }
+    @media only screen and (max-width: 767px) {
+      body section.legal-tabs .columns .tabs-navigation {
+        margin-bottom: 63px; } }
     body section.legal-tabs .columns .tabs-navigation .tab-name {
       font-family: "Museo Sans Condensed 300i";
       font-size: 24px;
@@ -1566,6 +1662,14 @@ body {
       text-transform: uppercase;
       margin-bottom: 8px;
       cursor: pointer; }
+      @media only screen and (max-width: 1023px) {
+        body section.legal-tabs .columns .tabs-navigation .tab-name {
+          font-size: 14px;
+          line-height: 22px; } }
+      @media only screen and (max-width: 767px) {
+        body section.legal-tabs .columns .tabs-navigation .tab-name {
+          font-size: 20px;
+          line-height: 28px; } }
       body section.legal-tabs .columns .tabs-navigation .tab-name.active {
         font-family: "Museo Sans Condensed 900i"; }
     body section.legal-tabs .columns .tabs-content .tab-content {
@@ -1574,14 +1678,47 @@ body {
         display: block; }
     body section.legal-animation-hero {
       position: relative;
-      height: 552px; }
+      padding-bottom: 0px;
+      padding-top: 121px; }
+      @media only screen and (max-width: 1023px) {
+        body section.legal-animation-hero {
+          padding-top: 83px; } }
+      @media only screen and (max-width: 767px) {
+        body section.legal-animation-hero {
+          padding-top: 67px; } }
+      body section.legal-animation-hero .content-wrap h1 {
+        margin-bottom: 59px; }
+        @media only screen and (max-width: 1023px) {
+          body section.legal-animation-hero .content-wrap h1 {
+            margin-bottom: 73px; } }
+        @media only screen and (max-width: 767px) {
+          body section.legal-animation-hero .content-wrap h1 {
+            text-align: center;
+            margin-bottom: 62px; } }
       body section.legal-animation-hero .animation-hero {
-        position: absolute;
-        width: 100%;
-        height: 552px;
-        top: 0px; }
+        margin-left: -60px;
+        margin-right: -60px; }
+        @media only screen and (max-width: 1023px) {
+          body section.legal-animation-hero .animation-hero {
+            margin-left: -32px;
+            margin-right: -32px; } }
+        @media only screen and (max-width: 767px) {
+          body section.legal-animation-hero .animation-hero {
+            margin-left: -500px;
+            margin-right: -500px; } }
     body section.about-us-columns .column.column-left .content-wrap {
       padding-right: 282px; }
+      @media only screen and (max-width: 1360px) {
+        body section.about-us-columns .column.column-left .content-wrap {
+          padding-right: 150px; } }
+      @media only screen and (max-width: 1023px) {
+        body section.about-us-columns .column.column-left .content-wrap {
+          padding-right: 70px; } }
+      @media only screen and (max-width: 767px) {
+        body section.about-us-columns .column.column-left .content-wrap {
+          padding-right: 108px; } }
+    body section.about-us-columns .column.column-right .column-image-wrap img {
+      max-width: 100%; }
   body footer {
     background-color: #000;
     padding: 64px 0px 64px;

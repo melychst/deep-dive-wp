@@ -146,6 +146,20 @@ body {
                 list-style: none;
                 display: inline-block;
                 margin: 0px 4px;
+                &.current_page_item {
+                    a {
+                        &:before {
+                            content: '';
+                            width: calc(100% - 12px);
+                            height: 1px;
+                            background-color: #000;
+                            position: absolute;
+                            bottom: -1px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
                 a {
                     font-family: "Museo Sans Condensed 300i";
                     font-size: 16px;
@@ -159,16 +173,6 @@ body {
                 }
                 &.active {
                     a {
-                        &:before {
-                            content: '';
-                            width: calc(100% - 12px);
-                            height: 1px;
-                            background-color: #000;
-                            position: absolute;
-                            bottom: -1px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                        }
                     }
                 }
             }
@@ -559,12 +563,44 @@ body {
                     position: absolute;
                     right: 56px;
                     bottom: -48px;
+                    @include media($xl){
+                        width: 100%;
+                        right: 46px;
+                        bottom: 45px;
+                    }
+                    @include media($md){
+                        position: static;
+                    }
                 }
             } 
             &.about-us {
                 .column {
+                    &.column-left {
+                        @include media($md){
+                            padding-top: 24px;
+                            padding-bottom: 69px;
+                        }
+                        .column-image-wrap {
+                            @include media($xl){
+                                width: 256px;
+                                padding-right: 0px;
+                            }
+                            @include media($md){
+                                width: 300px;
+                            }
+                            img {
+                                max-width: 100%;
+                            }
+                        }                        
+                    }
                     &.column-right {
                         padding-bottom: 156px;
+                        @include media($xl){
+                            padding-bottom: 79px;
+                        }
+                        @include media($md){
+                            padding-bottom: 30px;
+                        }
                     }
                 }
             }          
@@ -1096,13 +1132,36 @@ body {
             padding-top: 85px;
             padding-bottom: 119px;
             background-color: $color_deep_blue;
+            @include media($xl){
+                padding-top: 82px;
+                padding-bottom: 79px;
+            }
+            @include media($md){
+                padding-top: 65px;
+                padding-bottom: 53px;
+            }
             .content-wrap {
                 color: #ffffff;
-                text-align: center;                
-                .image-wrap {
-                    margin: 0 auto 46px;
+                text-align: center;    
+                width: 930px;
+                margin: 0 auto;    
+                @include media($xl){
+                    width: 510px;
+                }        
+                @include media($md){
+                    width: 343px;
+                }  
+                h3 {
+                    margin-top: 25px;
+                    @include media($xl){
+                        margin-top: 18px;
+                    }
+                    @include media($md){
+                        font-size: 24px;
+                        line-height: 32px;
+                        margin-top: 10px;
+                    }
                 }
-
             }
         }
         &.daily-price {
@@ -1470,12 +1529,24 @@ body {
             padding-top: 120px;
             padding-bottom: 96px;
             color: #333;
+            @include media($xl){
+                padding-top: 81px;
+                padding-bottom: 56px;
+            }
+            @include media($md){
+                padding-top: 66px;
+                padding-bottom: 40px;
+            }
             h3 {
                 font-family: "Museo Sans Condensed 500i";
                 font-size: 48px;
                 line-height: 48px; /* 100% */
                 text-transform: uppercase;
                 margin-bottom: 24px;
+                @include media($xl){
+                    font-size: 32px;
+                    line-height: 32px;
+                }
             }
             h4 {
                 font-family: "Museo Sans Condensed 300i";
@@ -1483,25 +1554,57 @@ body {
                 line-height: 32px; /* 133.333% */
                 text-transform: uppercase;
                 margin-bottom: 8px;
+                @include media($xl){
+                    font-size: 20px;
+                    line-height: 28px;
+                }
             }
             p {
                 margin-bottom: 24px;
+                @include media($xl){
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
             ul, ol {
                 padding-left: 23px;
                 margin-bottom: 24px;
+                @include media($xl){
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
         }
         &.legal-tabs {
             .columns {
+                @include media($md){
+                    flex-wrap: wrap;
+                }
                 .column-left {
                     width: 340px;
+                    @include media($xl){
+                        width: 182px;
+                    }
+                    @include media($md){
+                        width: 100%;
+                    }
                 }
                 .column-right {
                     width: calc(100% - 340px);
                     padding-left: 110px;
+                    @include media($xl){
+                        width: calc(100% - 182px);
+                        padding-left: 67px;
+                    }
+                    @include media($md){
+                        width: 100%;
+                        padding-left: 0px;
+                    }
                 }
                 .tabs-navigation {
+                    @include media($md){
+                        margin-bottom: 63px;
+                    }
                     .tab-name {
                         font-family: "Museo Sans Condensed 300i";
                         font-size: 24px;
@@ -1509,6 +1612,14 @@ body {
                         text-transform: uppercase;
                         margin-bottom: 8px;
                         cursor: pointer;
+                        @include media($xl){
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                        @include media($md){
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
                         &.active {
                             font-family: "Museo Sans Condensed 900i";
                         }
@@ -1526,12 +1637,37 @@ body {
         }
         &.legal-animation-hero {
             position: relative;
-            height: 552px;
+            padding-bottom: 0px;
+            padding-top: 121px;
+            @include media($xl){
+                padding-top: 83px;
+            }
+            @include media($md){
+                padding-top: 67px;
+            }
+            .content-wrap {
+                h1 {
+                    margin-bottom: 59px;
+                    @include media($xl){
+                        margin-bottom: 73px;
+                    }
+                    @include media($md){
+                        text-align: center;
+                        margin-bottom: 62px;
+                    }
+                }
+            }
             .animation-hero {
-                position: absolute;
-                width: 100%;
-                height: 552px;
-                top: 0px;
+                margin-left: -60px;
+                margin-right: -60px;
+                @include media($xl){
+                    margin-left: -32px;
+                    margin-right: -32px;
+                }
+                @include media($md){
+                    margin-left: -500px;
+                    margin-right: -500px;
+                }
             }
         }
         &.about-us-columns {
@@ -1539,6 +1675,22 @@ body {
                 &.column-left {
                     .content-wrap {
                         padding-right: 282px;
+                        @include media($xxl){
+                            padding-right: 150px;
+                        }
+                        @include media($xl){
+                            padding-right: 70px;
+                        }
+                        @include media($md){
+                            padding-right: 108px;
+                        }
+                    }
+                }
+                &.column-right {
+                    .column-image-wrap {
+                        img {
+                            max-width: 100%;
+                        }
                     }
                 }
             }
