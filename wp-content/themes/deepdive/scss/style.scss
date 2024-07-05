@@ -1,21 +1,21 @@
 @import '_general';
 @import '_global_wars';
 
-@include font-face('Arboria-Book', '../fonts/Arboria-Book');
+@include font-face('ArboriaBook', '../fonts/ArboriaBook');
 
 
-@include font-face('Museo Sans Condensed 300', '../fonts/MuseoSansCondensed-300');
-@include font-face('Museo Sans Condensed 500', '../fonts/MuseoSansCondensed-500');
-@include font-face('Museo Sans Condensed 700', '../fonts/MuseoSansCondensed-700');
-@include font-face('Museo Sans Condensed 900', '../fonts/MuseoSansCondensed-900');
-@include font-face('Museo Sans Condensed 300i', '../fonts/MuseoSansCondensed-300Italic');
-@include font-face('Museo Sans Condensed 500i', '../fonts/MuseoSansCondensed-500Italic');
-@include font-face('Museo Sans Condensed 700i', '../fonts/MuseoSansCondensed-700Italic');
-@include font-face('Museo Sans Condensed 900i', '../fonts/MuseoSansCondensed-900Italic');
+@include font-face('MuseoSansCondensed300', '../fonts/MuseoSansCondensed-300');
+@include font-face('MuseoSansCondensed500', '../fonts/MuseoSansCondensed-500');
+@include font-face('MuseoSansCondensed700', '../fonts/MuseoSansCondensed-700');
+@include font-face('MuseoSansCondensed900', '../fonts/MuseoSansCondensed-900');
+@include font-face('MuseoSansCondensed300i', '../fonts/MuseoSansCondensed-300Italic');
+@include font-face('MuseoSansCondensed500i', '../fonts/MuseoSansCondensed-500Italic');
+@include font-face('MuseoSansCondensed700i', '../fonts/MuseoSansCondensed-700Italic');
+@include font-face('MuseoSansCondensed900i', '../fonts/MuseoSansCondensed-900Italic');
 
 
 body {
-    font-family: "Arboria-Book", sans-serif;
+    font-family: "ArboriaBook", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -32,7 +32,7 @@ body {
         line-height: 24px;
     }
     h1 {
-        font-family: "Museo Sans Condensed 900i";
+        font-family: "MuseoSansCondensed900i";
         font-size: 72px;
         font-style: italic;
         font-weight: 500;
@@ -52,7 +52,7 @@ body {
         }
     }
     h3 {
-        font-family: "Museo Sans Condensed 500i", sans-serif;
+        font-family: "MuseoSansCondensed500i", sans-serif;
         font-size: 56px;
         font-style: italic;
         font-weight: 500;
@@ -161,7 +161,7 @@ body {
                     }
                 }
                 a {
-                    font-family: "Museo Sans Condensed 300i";
+                    font-family: "MuseoSansCondensed300i";
                     font-size: 16px;
                     font-style: italic;
                     font-weight: 300;
@@ -470,7 +470,7 @@ body {
                             }
                         }
                         .contacts {
-                            font-family: "Museo Sans Condensed 300i";
+                            font-family: "MuseoSansCondensed300i";
                             font-size: 24px;
                             line-height: 32px; /* 133.333% */
                             text-transform: uppercase;
@@ -539,7 +539,7 @@ body {
                                 }                 
                                 span {
                                     &.day {
-                                        font-family: "Museo Sans Condensed 300i";
+                                        font-family: "MuseoSansCondensed300i";
                                         width: 152px;
                                         margin-right: 35px;
                                         @include media($xl){
@@ -551,7 +551,7 @@ body {
                                         }
                                     }
                                     &.time {
-                                        font-family: "Museo Sans Condensed 900i";
+                                        font-family: "MuseoSansCondensed900i";
                                         width: calc(100% - 152px);
                                     }
                                 }
@@ -807,7 +807,7 @@ body {
                         }
                     }               
                     .title {
-                        font-family: "Museo Sans Condensed 300i";
+                        font-family: "MuseoSansCondensed300i";
                         font-size: 24px;
                         font-style: italic;
                         font-weight: 300;
@@ -890,7 +890,7 @@ body {
                             }
                         }
                         .name {
-                            font-family: "Museo Sans Condensed 300i";
+                            font-family: "MuseoSansCondensed300i";
                             font-size: 24px;
                             font-style: italic;
                             font-weight: 300;
@@ -982,7 +982,7 @@ body {
                 }
                 .title {
                     text-align: center;
-                    font-family: "Museo Sans Condensed 900i";
+                    font-family: "MuseoSansCondensed900i";
                     font-size: 72px;
                     font-style: italic;
                     font-weight: 900;
@@ -1081,7 +1081,7 @@ body {
                         }
                     }
                     .title {
-                        font-family: "Museo Sans Condensed 300i";
+                        font-family: "MuseoSansCondensed300i";
                         font-size: 24px;
                         font-style: italic;
                         font-weight: 300;
@@ -1192,7 +1192,7 @@ body {
                 .price-content {
                     margin-right: 74px;
                     color: #333;
-                    font-family: "Museo Sans Condensed 300i";
+                    font-family: "MuseoSansCondensed300i";
                     font-size: 24px;
                     font-style: italic;
                     font-weight: 300;
@@ -1328,7 +1328,7 @@ body {
                     .input-field {
                         width: 100%;
                         background-color: transparent;
-                        font-family: "Arboria-Book", sans-serif;
+                        font-family: "ArboriaBook", sans-serif;
                         font-size: 18px;
                         line-height: 26px; /* 144.444% */
                         border: none;
@@ -1345,20 +1345,20 @@ body {
                             margin-bottom: 11px;
                         }
                         &::placeholder {
-                            font-family: "Arboria-Book", sans-serif;
+                            font-family: "ArboriaBook", sans-serif;
                             color: $color_main;
                         }
                         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                             color: $color_main;
-                            font-family: "Arboria-Book", sans-serif;
+                            font-family: "ArboriaBook", sans-serif;
                         }
                         ::-ms-input-placeholder { /* Chrome/Opera/Safari */
                             color: $color_main;
-                            font-family: "Arboria-Book", sans-serif;
+                            font-family: "ArboriaBook", sans-serif;
                         }
                         ::-moz-placeholder { /* Chrome/Opera/Safari */
                             color: $color_main;
-                            font-family: "Arboria-Book", sans-serif;
+                            font-family: "ArboriaBook", sans-serif;
                         }
                     }
                 }
@@ -1386,7 +1386,7 @@ body {
                     font-size: 14px;
                     line-height: 22px;
                     padding-right: 40px;
-                    font-family: "Arboria-Book", sans-serif;
+                    font-family: "ArboriaBook", sans-serif;
                     display: block;
                     cursor: pointer;
                     @include media($xl){
@@ -1407,7 +1407,7 @@ body {
                     padding: 18px 32px 18px;
                     background-color: $color_main;
                     color: #FFF;
-                    font-family: "Museo Sans Condensed 500i";
+                    font-family: "MuseoSansCondensed500i";
                     font-size: 16px;
                     line-height: 24px; /* 150% */
                     text-transform: uppercase;
@@ -1557,7 +1557,7 @@ body {
                 max-width: 100%;
             }
             h3 {
-                font-family: "Museo Sans Condensed 500i";
+                font-family: "MuseoSansCondensed500i";
                 font-size: 48px;
                 line-height: 48px; /* 100% */
                 text-transform: uppercase;
@@ -1568,7 +1568,7 @@ body {
                 }
             }
             h4 {
-                font-family: "Museo Sans Condensed 300i";
+                font-family: "MuseoSansCondensed300i";
                 font-size: 24px;
                 line-height: 32px; /* 133.333% */
                 text-transform: uppercase;
@@ -1625,7 +1625,7 @@ body {
                         margin-bottom: 63px;
                     }
                     .tab-name {
-                        font-family: "Museo Sans Condensed 300i";
+                        font-family: "MuseoSansCondensed300i";
                         font-size: 24px;
                         line-height: 32px; /* 133.333% */
                         text-transform: uppercase;
@@ -1640,10 +1640,10 @@ body {
                             line-height: 28px;
                         }
                         &.active {
-                            font-family: "Museo Sans Condensed 900i";
+                            font-family: "MuseoSansCondensed900i";
                         }
                         &:hover {
-                            font-family: "Museo Sans Condensed 900i";
+                            font-family: "MuseoSansCondensed900i";
                         }
                     }
                 }
@@ -1798,7 +1798,7 @@ body {
                 width: 100%;
             }
             .title {
-                font-family: "Museo Sans Condensed 500i";
+                font-family: "MuseoSansCondensed500i";
                 font-size: 48px;
                 font-style: italic;
                 font-weight: 500;
@@ -1855,7 +1855,7 @@ body {
                 border-bottom: 2px solid #000000;
                 border-right: 2px solid #000000;
                 border-left: 2px solid #000000;
-                font-family: "Arboria-Book", sans-serif;
+                font-family: "ArboriaBook", sans-serif;
                 font-size: 18px;
                 line-height: 26px;
                 color: #999999;
@@ -1884,7 +1884,7 @@ body {
                 align-items: center;
                 background-color: #CFFF5E;
                 color: #000000;
-                font-family: "Museo Sans Condensed 500i";
+                font-family: "MuseoSansCondensed500i";
                 font-size: 16px;
                 line-height: 24px; /* 150% */
                 text-transform: uppercase;
@@ -1916,7 +1916,7 @@ body {
             }
         }
         .contacts {
-            font-family: "Museo Sans Condensed 300i";
+            font-family: "MuseoSansCondensed300i";
             font-size: 16px;
             font-style: italic;
             font-weight: 300;
