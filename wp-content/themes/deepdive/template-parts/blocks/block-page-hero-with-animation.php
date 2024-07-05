@@ -1,5 +1,5 @@
 <section class="page-hero legal-animation-hero">
-    <div class="container" style="z-index: 5;">
+    <div class="container">
         <div class="content-wrap">
             <h1><?php echo get_field('title'); ?></h1>
         </div>

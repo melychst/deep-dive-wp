@@ -2,10 +2,12 @@
     jQuery(document).ready(function () {
       console.log('Loaded ...');
       //   careerasAnimation();
-    });
+     });
+
     accordeon();
     mobileNavigation();
     termTabs();
+    subscribeFormValidation();
 
     function accordeon() {
       jQuery('.accordeon-item').on('click', function () {
@@ -40,4 +42,16 @@
 
       });
     }
+
+    function subscribeFormValidation(){
+      var wpcf7Elm = document.querySelector( 'footer .wpcf7' );
+      console.log(jQuery(wpcf7Elm).attr('id'));
+      jQuery('footer .wpcf7-submit').on('click', function(){
+        jQuery(this).removeClass('error');
+      });
+      wpcf7Elm.addEventListener( 'wpcf7invalid', function( event ) {
+        jQuery('footer .wpcf7-submit').addClass('error');
+      }, false );
+    }
+    
 })(jQuery)
