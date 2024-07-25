@@ -1773,6 +1773,7 @@ body {
         .bottom-row {
             .column-right {
                 display: flex;
+                align-items: end;
                 .image-wrap {
                     display: none;
                     width: 117px;
@@ -1950,5 +1951,54 @@ body {
                 }
             }
         }   
+        .navigation-wrap {
+            margin-bottom: -4px;
+            margin-right: 50px;
+            &.mobile-navigation {
+                margin-bottom: 60px;
+                display: none;
+                @include media($md){
+                    display: block;
+                }
+            }
+            &.desktop-navigation {
+                @include media($md){
+                    display: none;
+                }
+            }
+            li {
+                display: inline-block;
+                list-style: none;
+                a {
+                    font-family: "MuseoSansCondensed300i";
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    padding: 0px 6px;
+                    display: inline-block;
+                    position: relative;
+                    color: #ffffff;
+                    transition: 0.2s;
+                    &::before {
+                        content: '';
+                        width: 0px;
+                        height: 1px;
+                        background-color: #ffffff;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        transition: 0.2s;
+                    } 
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                            transition: 0.2s;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

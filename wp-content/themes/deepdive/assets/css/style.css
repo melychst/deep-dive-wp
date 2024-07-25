@@ -1789,7 +1789,10 @@ body {
     body footer .bottom-row .column-right {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: end; }
       body footer .bottom-row .column-right .image-wrap {
         display: none;
         width: 117px; }
@@ -1960,5 +1963,47 @@ body {
             margin-right: 24px; } }
         body footer .social-links .social-item:last-child {
           margin-right: 0px; }
+    body footer .navigation-wrap {
+      margin-bottom: -4px;
+      margin-right: 50px; }
+      body footer .navigation-wrap.mobile-navigation {
+        margin-bottom: 60px;
+        display: none; }
+        @media only screen and (max-width: 767px) {
+          body footer .navigation-wrap.mobile-navigation {
+            display: block; } }
+      @media only screen and (max-width: 767px) {
+        body footer .navigation-wrap.desktop-navigation {
+          display: none; } }
+      body footer .navigation-wrap li {
+        display: inline-block;
+        list-style: none; }
+        body footer .navigation-wrap li a {
+          font-family: "MuseoSansCondensed300i";
+          font-size: 16px;
+          font-style: italic;
+          font-weight: 300;
+          line-height: 24px;
+          text-transform: uppercase;
+          padding: 0px 6px;
+          display: inline-block;
+          position: relative;
+          color: #ffffff;
+          -webkit-transition: 0.2s;
+          transition: 0.2s; }
+          body footer .navigation-wrap li a::before {
+            content: '';
+            width: 0px;
+            height: 1px;
+            background-color: #ffffff;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            -webkit-transition: 0.2s;
+            transition: 0.2s; }
+          body footer .navigation-wrap li a:hover::before {
+            width: 100%;
+            -webkit-transition: 0.2s;
+            transition: 0.2s; }
 
 /*# sourceMappingURL=style.css.map */

@@ -80,6 +80,16 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="navigation-wrap mobile-navigation">
+                    <?php
+                        wp_nav_menu(array(
+                            "theme_location"  => "footer",
+                            "menu"              => "footer",
+                        ));
+                    ?>
+                </div>
+
                 <div class="bottom-row">
                     <div class="columns display-flex">
                         <div class="column column-left">
@@ -95,6 +105,14 @@
                             </div>
                         </div>
                         <div class="column column-right">
+                            <div class="navigation-wrap desktop-navigation">
+                                <?php
+                                    wp_nav_menu(array(
+                                        "theme_location"  => "footer",
+                                        "menu"              => "footer",
+                                    ));
+                                ?>
+                            </div>
                             <div class="social-links">
                                 <?php if( $contacts['facebook'] != '' ): ?>
                                     <div class="social-item facebook">
